@@ -1,0 +1,31 @@
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\obj\Debug\Bank.FormClient.resources
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\obj\Debug\Bank.FormDeposit.resources
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\obj\Debug\Bank.FormLoan.resources
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\obj\Debug\Bank.mainForm.resources
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\obj\Debug\Bank.FormManager.resources
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\obj\Debug\Bank.Properties.Resources.resources
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\obj\Debug\Bank.csproj.GenerateResource.Cache
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\bin\Debug\BankDB.mdf
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\bin\Debug\Bank.exe.config
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\bin\Debug\Bank.exe
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\bin\Debug\Bank.pdb
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\bin\Debug\Base.dll
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\bin\Debug\Base.pdb
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\obj\Debug\Bank.csprojResolveAssemblyReference.cache
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\obj\Debug\Bank.exe
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Bank\obj\Debug\Bank.pdb
+C:\dd\Bank\Bank\bin\Debug\Base.dll
+C:\dd\Bank\Bank\bin\Debug\Base.pdb
+C:\dd\Bank\Bank\obj\Debug\Bank.FormClient.resources
+C:\dd\Bank\Bank\obj\Debug\Bank.FormDeposit.resources
+C:\dd\Bank\Bank\obj\Debug\Bank.FormLoan.resources
+C:\dd\Bank\Bank\obj\Debug\Bank.mainForm.resources
+C:\dd\Bank\Bank\obj\Debug\Bank.FormManager.resources
+C:\dd\Bank\Bank\obj\Debug\Bank.Properties.Resources.resources
+C:\dd\Bank\Bank\obj\Debug\Bank.csproj.GenerateResource.Cache
+C:\dd\Bank\Bank\obj\Debug\Bank.exe
+C:\dd\Bank\Bank\obj\Debug\Bank.pdb
+C:\dd\Bank\Bank\obj\Debug\Bank.csprojResolveAssemblyReference.cache
+C:\dd\Bank\Bank\bin\Debug\Bank.exe.config
+C:\dd\Bank\Bank\bin\Debug\Bank.exe
+C:\dd\Bank\Bank\bin\Debug\Bank.pdb

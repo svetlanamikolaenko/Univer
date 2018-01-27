@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfKeyValueOfintManagervwrQDC8P xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <KeyValueOfintManagervwrQDC8P>
+    <Key>1</Key>
+    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
+      <d3p1:Name>man1</d3p1:Name>
+    </Value>
+  </KeyValueOfintManagervwrQDC8P>
+  <KeyValueOfintManagervwrQDC8P>
+    <Key>2</Key>
+    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
+      <d3p1:Name>man2</d3p1:Name>
+    </Value>
+  </KeyValueOfintManagervwrQDC8P>
+  <KeyValueOfintManagervwrQDC8P>
+    <Key>3</Key>
+    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
+      <d3p1:Name>a</d3p1:Name>
+    </Value>
+  </KeyValueOfintManagervwrQDC8P>
+</ArrayOfKeyValueOfintManagervwrQDC8P>

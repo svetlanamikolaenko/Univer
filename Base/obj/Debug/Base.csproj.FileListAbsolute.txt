@@ -1,0 +1,12 @@
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Base\bin\Debug\Base.dll.config
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Base\bin\Debug\Base.dll
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Base\bin\Debug\Base.pdb
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Base\obj\Debug\Base.dll
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Base\obj\Debug\Base.pdb
+C:\Users\Anton\documents\visual studio 2015\Projects\Bank\Base\obj\Debug\Base.csprojResolveAssemblyReference.cache
+C:\dd\Bank\Base\bin\Debug\Base.dll.config
+C:\dd\Bank\Base\bin\Debug\Base.dll
+C:\dd\Bank\Base\bin\Debug\Base.pdb
+C:\dd\Bank\Base\obj\Debug\Base.csprojResolveAssemblyReference.cache
+C:\dd\Bank\Base\obj\Debug\Base.dll
+C:\dd\Bank\Base\obj\Debug\Base.pdb

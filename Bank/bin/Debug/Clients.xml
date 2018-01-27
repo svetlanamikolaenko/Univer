@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfKeyValueOfintClientvwrQDC8P xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <KeyValueOfintClientvwrQDC8P>
+    <Key>1</Key>
+    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
+      <d3p1:Name>fccf</d3p1:Name>
+      <d3p1:Deposit
+        i:nil="true" />
+      <d3p1:Loan
+        i:nil="true" />
+      <d3p1:Manager>
+        <d3p1:Name>man1</d3p1:Name>
+      </d3p1:Manager>
+    </Value>
+  </KeyValueOfintClientvwrQDC8P>
+  <KeyValueOfintClientvwrQDC8P>
+    <Key>2</Key>
+    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
+      <d3p1:Name>bro</d3p1:Name>
+      <d3p1:Deposit
+        i:nil="true" />
+      <d3p1:Loan
+        i:nil="true" />
+      <d3p1:Manager>
+        <d3p1:Name>man2</d3p1:Name>
+      </d3p1:Manager>
+    </Value>
+  </KeyValueOfintClientvwrQDC8P>
+</ArrayOfKeyValueOfintClientvwrQDC8P>
