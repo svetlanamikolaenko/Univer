@@ -1,4 +1,4 @@
-﻿using Base;
+﻿using Lib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -130,9 +130,9 @@ namespace Bank
                     i++;
                     */
                     SqlCommand com = new SqlCommand("INSERT INTO Client VALUES (@par1, @par2,                        @par3, '','')", con);
-                    com.Parameters.AddWithValue("par1", mainForm.GenerateAutoId(con, "Client"));
-                    com.Parameters.AddWithValue("par2", cl.Value.Name);
-                    com.Parameters.AddWithValue("par3", cl.Value.Manager.Name);
+                    com.Parameters.AddWithValue("par1", cl.ID);
+                    com.Parameters.AddWithValue("par2", cl.Name);
+                    com.Parameters.AddWithValue("par3", cl.Manager); 
                     com.ExecuteNonQuery();
                 }
 
@@ -162,11 +162,17 @@ namespace Bank
             GenerateAutoId();
             UpdateClientList();
             */
-            new Client(textBox5.Text,new Manager(listBox1.Text));
-            SaveToDB();
+            int lastId = 0;
+            if (Client.Clients.LastOrDefault() != null)
+            {
+                lastId = Client.Clients.Last().ID;
+            }
+            new Client(mainForm.GenerateAutoId(lastId, con, "Client"), textBox5.Text, listBox1.Text);
             SaveToXML(Client.Clients, "Clients.xml");
+            SaveToDB();
+            textBox5.Clear();
             MessageBox.Show("Client was created successfully.");
-
+            
             /*
             Client client = new Client(textBox5.Text, new Manager(listBox1.Text));
             XmlSerializer formatter = new XmlSerializer(typeof(Client));
@@ -178,5 +184,40 @@ namespace Bank
             MessageBox.Show("Client was created successfully.");
             */
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            var client = listBox3.SelectedItem.ToString();
+            Client.Clients.RemoveAll(r => r.Name == client);
+            mainForm.DeleteFromDB(con, "Client", client);
+            con.Close();
+            UpdateClientList();
+            SaveToXML(Client.Clients, "Clients.xml");
+            MessageBox.Show("Client was deleted.");
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            var oldCl = listBox3.SelectedItem.ToString();
+            int id = 0;
+            foreach (var par in Client.Clients)
+            {
+                if (par.Name == oldCl)
+                {
+                    par.Name = textBox7.Text;
+                    id = par.ID;
+                }
+            }
+
+            mainForm.UpdateDB(con, "Client", textBox7.Text, id);
+            con.Close();
+            UpdateClientList();
+            SaveToXML(Client.Clients, "Clients.xml");
+            textBox7.Clear();
+            MessageBox.Show("Client was updated.");
+        }
+    
     }
 }

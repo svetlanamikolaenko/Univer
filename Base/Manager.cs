@@ -5,29 +5,34 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Base
+namespace Lib
 {
     [DataContract]
     public class Manager : Base
     {
-        public static Dictionary<int, Manager> Managers = new Dictionary<int, Manager>();
+        public static List <Manager> Managers = new List<Manager>();
 
+        public Manager(int id, String name) : base(id, name)
+        {
+            Managers.Add(this);
+        }
         public Manager(String name) : base(name)
         {
-            Managers.Add(GenerateAutoId(), this);
+            Managers.Add(this);
         }
-
+/*
         public List<Client> Clients
         {
             get
             {
                 List<Client> cl = new List<Client>();
-                foreach (var val in Client.Clients.Values)
+                foreach (var val in Client.Clients)
                     if (val.Manager == this)
                         cl.Add(val);
                 return cl;
             }
         }
+        */
         public int GenerateAutoId()
         {
             int i = Managers.Count;

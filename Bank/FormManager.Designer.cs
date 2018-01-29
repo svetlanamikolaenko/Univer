@@ -34,11 +34,11 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.delBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
             this.createBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.searchField = new System.Windows.Forms.TextBox();
@@ -55,7 +55,6 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.editManBtn = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -87,7 +86,6 @@
             this.panel1.Controls.Add(this.listBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.delBtn);
             this.panel1.Controls.Add(this.editBtn);
             this.panel1.Controls.Add(this.createBtn);
@@ -125,13 +123,6 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(84, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 3;
-            // 
             // delBtn
             // 
             this.delBtn.Location = new System.Drawing.Point(3, 86);
@@ -140,6 +131,7 @@
             this.delBtn.TabIndex = 2;
             this.delBtn.Text = "Remove";
             this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
             // 
             // editBtn
             // 
@@ -149,6 +141,7 @@
             this.editBtn.TabIndex = 1;
             this.editBtn.Text = "Edit";
             this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // createBtn
             // 
@@ -172,6 +165,14 @@
             this.panel2.Size = new System.Drawing.Size(277, 171);
             this.panel2.TabIndex = 6;
             this.panel2.Visible = false;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(119, 63);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(152, 95);
+            this.listBox2.TabIndex = 5;
             // 
             // label2
             // 
@@ -324,14 +325,7 @@
             this.editManBtn.TabIndex = 0;
             this.editManBtn.Text = "Edit";
             this.editManBtn.UseVisualStyleBackColor = true;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(119, 63);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(152, 95);
-            this.listBox2.TabIndex = 5;
+            this.editManBtn.Click += new System.EventHandler(this.editManBtn_Click);
             // 
             // FormManager
             // 
@@ -364,7 +358,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button delBtn;
         private System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.Button createBtn;

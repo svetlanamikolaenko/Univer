@@ -1,4 +1,4 @@
-﻿using Base;
+﻿using Lib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ namespace Bank
 {
     public partial class FormLoan : Form
     {
-        private mainForm _mainForm;
+        //private mainForm _mainForm;
         public FormLoan()
         {
             InitializeComponent();
@@ -67,7 +67,12 @@ namespace Bank
 
         private void button7_Click(object sender, EventArgs e)
         {
-            new Loan(textBox2.Text, Int32.Parse(textBox3.Text), Int32.Parse(textBox4.Text));
+            int lastId = 0;
+            if (Loan.Loans.LastOrDefault() != null)
+            {
+                lastId = Loan.Loans.Last().ID;
+            }
+            new Loan(mainForm.GenerateAutoId(lastId, con, "Loan"), textBox2.Text, Int32.Parse(textBox3.Text), Int32.Parse(textBox4.Text));
             SaveToXML(Loan.Loans, "Loans.xml");
             SaveToDB();
             textBox2.Clear();
@@ -86,10 +91,10 @@ namespace Bank
                 if (credit.Equals(last))
                 {
                     SqlCommand localcommand = new SqlCommand("INSERT INTO LOAN VALUES (@par1, @par2, @par3, @par4, '')", con);
-                    localcommand.Parameters.AddWithValue("par1", mainForm.GenerateAutoId(con, "LOAN"));
-                    localcommand.Parameters.AddWithValue("par2", credit.Value.Name);
-                    localcommand.Parameters.AddWithValue("par3", credit.Value.Percent);
-                    localcommand.Parameters.AddWithValue("par4", credit.Value.Period);
+                    localcommand.Parameters.AddWithValue("par1", credit.ID);
+                    localcommand.Parameters.AddWithValue("par2", credit.Name);
+                    localcommand.Parameters.AddWithValue("par3", credit.Procent);
+                    localcommand.Parameters.AddWithValue("par4", credit.Period);
                     localcommand.ExecuteNonQuery();
                 }
                }
@@ -118,6 +123,44 @@ namespace Bank
             XmlWriter xmlw = XmlWriter.Create(fileName, xmlWriterSettings);
             dcs.WriteObject(xmlw, obj);
             xmlw.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            var cred = listBox1.SelectedItem.ToString();
+            Loan.Loans.RemoveAll(r => r.Name == cred);
+            mainForm.DeleteFromDB(con, "Loan", cred);
+            con.Close();
+            UpdateLoanList();
+            SaveToXML(Loan.Loans, "Loans.xml");
+            MessageBox.Show("Loan was deleted.");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            var oldCr = listBox1.SelectedItem.ToString();
+            int id = 0;
+            foreach (var par in Loan.Loans)
+            {
+                if (par.Name == oldCr)
+                {
+                    par.Name = textBox5.Text;
+                    par.Procent = Int32.Parse(textBox6.Text);
+                    par.Period = Int32.Parse(textBox7.Text);
+                    id = par.ID;
+                }
+            }
+
+            mainForm.UpdateDB(con, "Loan", textBox5.Text, Int32.Parse(textBox6.Text), Int32.Parse(textBox7.Text), id);
+            con.Close();
+            UpdateLoanList();
+            SaveToXML(Loan.Loans, "Loans.xml");
+            textBox5.Clear();
+            textBox6.Clear();
+            textBox7.Clear();
+            MessageBox.Show("Loan was updated.");
         }
     }
 }

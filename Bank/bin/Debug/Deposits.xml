@@ -1,27 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfKeyValueOfintDepositvwrQDC8P xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-  <KeyValueOfintDepositvwrQDC8P>
-    <Key>1</Key>
-    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
-      <d3p1:Name>Dep test</d3p1:Name>
-      <d3p1:Percent>2</d3p1:Percent>
-      <d3p1:Period>22</d3p1:Period>
-    </Value>
-  </KeyValueOfintDepositvwrQDC8P>
-  <KeyValueOfintDepositvwrQDC8P>
-    <Key>2</Key>
-    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
-      <d3p1:Name>Dep test2</d3p1:Name>
-      <d3p1:Percent>33</d3p1:Percent>
-      <d3p1:Period>11</d3p1:Period>
-    </Value>
-  </KeyValueOfintDepositvwrQDC8P>
-  <KeyValueOfintDepositvwrQDC8P>
-    <Key>3</Key>
-    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
-      <d3p1:Name>QAZ</d3p1:Name>
-      <d3p1:Percent>2</d3p1:Percent>
-      <d3p1:Period>2</d3p1:Period>
-    </Value>
-  </KeyValueOfintDepositvwrQDC8P>
-</ArrayOfKeyValueOfintDepositvwrQDC8P>
+<ArrayOfDeposit xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Lib">
+  <Deposit>
+    <ID>1</ID>
+    <Name>Tee</Name>
+    <Period>3</Period>
+    <Procent>3</Procent>
+  </Deposit>
+  <Deposit>
+    <ID>3</ID>
+    <Name>NVJ</Name>
+    <Period>22</Period>
+    <Procent>33</Procent>
+  </Deposit>
+  <Deposit>
+    <ID>4</ID>
+    <Name>NJJ</Name>
+    <Period>11</Period>
+    <Procent>22</Procent>
+  </Deposit>
+  <Deposit>
+    <ID>6</ID>
+    <Name>VNA</Name>
+    <Period>22</Period>
+    <Procent>43</Procent>
+  </Deposit>
+  <Deposit>
+    <ID>7</ID>
+    <Name>Test</Name>
+    <Period>10</Period>
+    <Procent>111</Procent>
+  </Deposit>
+  <Deposit>
+    <ID>8</ID>
+    <Name>BRO</Name>
+    <Period>11</Period>
+    <Procent>3</Procent>
+  </Deposit>
+</ArrayOfDeposit>

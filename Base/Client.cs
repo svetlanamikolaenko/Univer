@@ -5,32 +5,32 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Base
+namespace Lib
 {
     [DataContract]
     public class Client : Base
     {
-        public static Dictionary<int, Client> Clients = new Dictionary<int, Client>();
+        public static List<Client> Clients = new List <Client>();
 
         [DataMember]
-        public Manager Manager { get; set; }
-        [DataMember]
-        public Loan Loan { get; set; }
-        [DataMember]
-        public Deposit Deposit { get; set; }
+        public string Manager { get; set; }
 
-        public Client(string name, Manager manager) : base(name)
+
+        public Client(int id, string name, string manager) : base(id, name)
         {
-            Clients.Add(GenerateAutoId(), this);
+            Clients.Add(this);
             Manager = manager;
         }
 
-        public Client(string name, Manager manager, Loan loan, Deposit deposit): base (name) {
-            Clients.Add(GenerateAutoId(), this);
-            Manager = manager;
-            Loan = loan;
-            Deposit = deposit;
-        }
+        
+        /*
+                public Client(int id, string name, Manager manager, Loan loan, Deposit deposit): base (id, name) {
+                    Clients.Add(this);
+                    Manager = manager;
+                    Loan = loan;
+                    Deposit = deposit;
+                }
+                */
         public int GenerateAutoId()
         {
 

@@ -5,45 +5,47 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Base
+namespace Lib
 {
     [DataContract]
     public class Deposit : Base
     {
-        public static Dictionary<int, Deposit> Deposits = new Dictionary<int, Deposit>();
+        public static List<Deposit> Deposits = new List<Deposit>();
 
         [DataMember]
-        public int Percent;
+        public int Procent;
         [DataMember]
         public int Period;
-        Client Client;
+        public string Client;
 
-        public Deposit(String name, int percent, int period) : base(name)
+
+        public Deposit(int id, String name, int procent, int period) : base(id, name)
         {
-            Deposits.Add(GenerateAutoId(), this);
-            Percent = percent;
+            Deposits.Add(this);
+            Procent = procent;
             Period = period;
         }
 
-        public Deposit(String name, int percent, int period, Client client) : base(name)
+        public Deposit(int id, String name, int procent, int period, string client) : base(id, name)
         {
-            Deposits.Add(GenerateAutoId(), this);
-            Percent = percent;
+            Deposits.Add(this);
+            Procent = procent;
             Period = period;
             Client = client;
         }
-
+        /*
         public List<Client> Clients
         {
             get
             {
                 List<Client> cl = new List<Client>();
-                foreach (var val in Client.Clients.Values)
+                foreach (var val in Client.Clients)
                     if (val.Deposit == this)
                         cl.Add(val);
                 return cl;
             }
         }
+        */
         public int GenerateAutoId()
         {
 
