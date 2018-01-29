@@ -132,9 +132,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Base\Base.csproj">
+    <ProjectReference Include="..\Base\Lib.csproj">
       <Project>{D3A2BBC7-CF84-4625-809D-09494AAE526F}</Project>
-      <Name>Base</Name>
+      <Name>Lib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

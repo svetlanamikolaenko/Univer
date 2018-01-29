@@ -1,4 +1,4 @@
-﻿using Base;
+﻿using Lib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +24,6 @@ namespace Bank
         }
 
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\dd\Bank\Bank\Bankir.mdf");
-        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -40,7 +39,7 @@ namespace Bank
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                listBox1.Items.Add(Convert.ToString(reader["Name"]));
+                listBox1.Items.Add((reader["Name"]).ToString());
             }
             con.Close();
         }
@@ -91,9 +90,15 @@ namespace Bank
 
         private void createManBtn_Click(object sender, EventArgs e)
         {
-            new Manager(textBox5.Text);
+            int lastId = 0;
+            if (Manager.Managers.LastOrDefault() != null)
+            {
+                lastId = Manager.Managers.Last().ID;
+            }
+            new Manager(mainForm.GenerateAutoId(lastId, con, "Manager"), textBox5.Text);
             SaveToXML(Manager.Managers, "Managers.xml");
             SaveToDB();
+            textBox5.Clear();
             MessageBox.Show("Manager was added successfully.");
         }
 
@@ -122,8 +127,8 @@ namespace Bank
                     i++;
                     */
                     SqlCommand com = new SqlCommand("INSERT INTO Manager VALUES (@par1, @par2)", con);
-                    com.Parameters.AddWithValue("par1", mainForm.GenerateAutoId(con, "Manager"));
-                    com.Parameters.AddWithValue("par2", man.Value.Name);
+                    com.Parameters.AddWithValue("par1", man.ID);
+                    com.Parameters.AddWithValue("par2", man.Name);
                     com.ExecuteNonQuery();
                 }
 
@@ -163,6 +168,44 @@ private void GenerateAutoId() {
                 listBox2.Items.Add(Convert.ToString(reader["Name"]));
             }
             con.Close();
+        }
+        
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            var man = listBox1.SelectedItem.ToString();
+            Manager.Managers.RemoveAll(r => r.Name == man);
+            mainForm.DeleteFromDB(con, "Manager",man);
+            con.Close();
+            UpdateManagersList();
+            SaveToXML(Manager.Managers, "Managers.xml");
+            MessageBox.Show("Manager was deleted.");
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+        }
+
+        private void editManBtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            var oldMan = listBox1.SelectedItem.ToString();
+            int id=0;
+            foreach (var par in Manager.Managers) {
+                if (par.Name == oldMan)
+                {
+                    par.Name = textBox6.Text;
+                    id = par.ID;
+                }
+            }
+
+            mainForm.UpdateDB(con, "Manager", textBox6.Text, id);
+            con.Close();
+            UpdateManagersList();
+            SaveToXML(Manager.Managers, "Managers.xml");
+            textBox6.Clear();
+            MessageBox.Show("Manager was updated.");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization;
 using System.Data.SqlClient;
 
-namespace Base
+namespace Lib
 {
     [DataContract]
     public class Base
@@ -14,11 +14,19 @@ namespace Base
 
         [DataMember]
         public string Name { get; set; }
+        [DataMember]
+        public int ID { get; set; }
 
-        public Base(string name = null)
+        public Base(int id, string name = null) {
+            ID = id;
+            Name = name;
+        }
+
+        public Base(string name)
         {
             Name = name;
         }
+
         public override string ToString()
         {
             return Name;

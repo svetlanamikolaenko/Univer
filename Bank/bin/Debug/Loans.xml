@@ -1,67 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfKeyValueOfintLoanvwrQDC8P xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-  <KeyValueOfintLoanvwrQDC8P>
-    <Key>1</Key>
-    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
-      <d3p1:Name>Qaa</d3p1:Name>
-      <d3p1:Percent>4</d3p1:Percent>
-      <d3p1:Period>2</d3p1:Period>
-    </Value>
-  </KeyValueOfintLoanvwrQDC8P>
-  <KeyValueOfintLoanvwrQDC8P>
-    <Key>2</Key>
-    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
-      <d3p1:Name>QAZ</d3p1:Name>
-      <d3p1:Percent>2</d3p1:Percent>
-      <d3p1:Period>2</d3p1:Period>
-    </Value>
-  </KeyValueOfintLoanvwrQDC8P>
-  <KeyValueOfintLoanvwrQDC8P>
-    <Key>3</Key>
-    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
-      <d3p1:Name>ASDA</d3p1:Name>
-      <d3p1:Percent>22</d3p1:Percent>
-      <d3p1:Period>11</d3p1:Period>
-    </Value>
-  </KeyValueOfintLoanvwrQDC8P>
-  <KeyValueOfintLoanvwrQDC8P>
-    <Key>4</Key>
-    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
-      <d3p1:Name>TEST</d3p1:Name>
-      <d3p1:Percent>22</d3p1:Percent>
-      <d3p1:Period>2</d3p1:Period>
-    </Value>
-  </KeyValueOfintLoanvwrQDC8P>
-  <KeyValueOfintLoanvwrQDC8P>
-    <Key>5</Key>
-    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
-      <d3p1:Name>rrr</d3p1:Name>
-      <d3p1:Percent>33</d3p1:Percent>
-      <d3p1:Period>2</d3p1:Period>
-    </Value>
-  </KeyValueOfintLoanvwrQDC8P>
-  <KeyValueOfintLoanvwrQDC8P>
-    <Key>6</Key>
-    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
-      <d3p1:Name>vvv</d3p1:Name>
-      <d3p1:Percent>2</d3p1:Percent>
-      <d3p1:Period>2</d3p1:Period>
-    </Value>
-  </KeyValueOfintLoanvwrQDC8P>
-  <KeyValueOfintLoanvwrQDC8P>
-    <Key>7</Key>
-    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
-      <d3p1:Name>ee</d3p1:Name>
-      <d3p1:Percent>3</d3p1:Percent>
-      <d3p1:Period>2</d3p1:Period>
-    </Value>
-  </KeyValueOfintLoanvwrQDC8P>
-  <KeyValueOfintLoanvwrQDC8P>
-    <Key>8</Key>
-    <Value xmlns:d3p1="http://schemas.datacontract.org/2004/07/Base">
-      <d3p1:Name>aqq</d3p1:Name>
-      <d3p1:Percent>11</d3p1:Percent>
-      <d3p1:Period>1</d3p1:Period>
-    </Value>
-  </KeyValueOfintLoanvwrQDC8P>
-</ArrayOfKeyValueOfintLoanvwrQDC8P>
+<ArrayOfLoan xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Lib">
+  <Loan>
+    <ID>1</ID>
+    <Name>Qaa</Name>
+    <Period>2</Period>
+    <Procent>4</Procent>
+  </Loan>
+  <Loan>
+    <ID>3</ID>
+    <Name>ASDA</Name>
+    <Period>23</Period>
+    <Procent>333</Procent>
+  </Loan>
+  <Loan>
+    <ID>6</ID>
+    <Name>vvv</Name>
+    <Period>2</Period>
+    <Procent>2</Procent>
+  </Loan>
+  <Loan>
+    <ID>7</ID>
+    <Name>asd</Name>
+    <Period>333</Period>
+    <Procent>3</Procent>
+  </Loan>
+  <Loan>
+    <ID>8</ID>
+    <Name>Test</Name>
+    <Period>22</Period>
+    <Procent>22</Procent>
+  </Loan>
+  <Loan>
+    <ID>9</ID>
+    <Name>QW</Name>
+    <Period>2</Period>
+    <Procent>33</Procent>
+  </Loan>
+</ArrayOfLoan>
